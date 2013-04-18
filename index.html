@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Macrophage</title>
+  
+  <script type="text/javascript" src="js/processing-1.4.1.js"></script>
+  
+  <script>
+  function testAttribute(element, attribute) {
+     var test = document.createElement(element);
+    if (attribute in test) {
+      return true;
+    }
+    else 
+      return false;
+  }
+
+  window.onload = function() {
+    if (!testAttribute('input', 'autofocus'))
+    document.getElementById('planet-canvas').focus(); 
+    //for browser has no autofocus support, set focus to Text2.
+  }
+  </script> 
+  </head>
+  <body style="background: #000; margin: 0">
+      <canvas tabindex="1" autofocus id="planet-canvas" data-processing-sources="macrophage.pde" width="480" height="480"></canvas>
+  </body>
+</html>
